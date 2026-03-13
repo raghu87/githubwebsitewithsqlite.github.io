@@ -29,9 +29,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Initialize database
-        run: npm run init-db
-
       - name: Build static site
         run: npm run build
 
