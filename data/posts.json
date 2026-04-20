@@ -25,5 +25,14 @@
     "content": "# Static Site Generation Best Practices\n\n## What is SSG?\nStatic Site Generation (SSG) pre-renders pages at build time, resulting in highly optimized static HTML files.\n\n## Advantages\n- Lightning-fast page loads\n- Better SEO\n- Reduced server costs\n- Improved security\n\n## Best Practices\n1. Use getStaticProps for data fetching\n2. Pre-render only critical pages\n3. Use ISR for dynamic content updates\n4. Optimize images and assets\n\nSSG is perfect for blogs, documentation, and marketing sites.",
     "author": "Bob Johnson",
     "created_at": "2024-03-12T09:15:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Static Site Generation Best Practices",
+    "slug": "static-site-generation-best-practices",
+    "excerpt": "Learn how to build fast and performant static sites using Next.js SSG.",
+    "content": "# Static Site Generation Best Practices\n\n## What is SSG?\nStatic Site Generation (SSG) pre-renders pages at build time, resulting in highly optimized static HTML files.\n\n## Advantages\n- Lightning-fast page loads\n- Better SEO\n- Reduced server costs\n- Improved security\n\n## Best Practices\n1. Use getStaticProps for data fetching\n2. Pre-render only critical pages\n3. Use ISR for dynamic content updates\n4. Optimize images and assets\n\nSSG is perfect for blogs, documentation, and marketing sites.",
+    "author": "Bob Johnson",
+    "created_at": "2024-03-12T09:15:00Z"
   }
 ]
