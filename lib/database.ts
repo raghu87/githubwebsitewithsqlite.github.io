@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import Database from 'better-sqlite3';
 
 export interface Post {
   id: number;
@@ -9,6 +10,17 @@ export interface Post {
   content: string;
   author: string;
   created_at: string;
+}
+
+export interface HomeEntry {
+  id: number;
+  location: string;
+  latitude: number;
+  longitude: number;
+  elevation: number;
+  sunrise: string;
+  sunset: string;
+  date: string;
 }
 
 function getDataPath(): string {
@@ -47,4 +59,17 @@ export async function getPostSlugs(): Promise<string[]> {
   return posts.map(post => post.slug);
 }
 
+export function getHomeEntries(): HomeEntry[] {
+  const dbPath = path.join(process.cwd(), 'data', 'home.db');
+  if (!fs.existsSync(dbPath)) {
+    console.warn(`home.db not found at ${dbPath}`);
+    return [];
+  }
+  const db = new Database(dbPath, { readonly: true });
+  try {
+    return db.prepare('SELECT * FROM home ORDER BY date DESC').all() as HomeEntry[];
+  } finally {
+    db.close();
+  }
+}
 
