@@ -71,7 +71,7 @@ export default async function PostPage({ params }: PageProps) {
 
   return (
     <>
-      <Link href="/" className="back-link">
+      <Link href="/" className="back-link" prefetch={false}>
         ← Back to all posts
       </Link>
 

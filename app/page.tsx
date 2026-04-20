@@ -19,13 +19,13 @@ function PostCard({ title, slug, excerpt, author, created_at }: PostCardProps) {
   return (
     <article className="post-card">
       <h2>
-        <Link href={`/posts/${slug}`}>{title}</Link>
+        <Link href={`/posts/${slug}`} prefetch={false}>{title}</Link>
       </h2>
       <div className="post-meta">
         By <strong>{author}</strong> on {date}
       </div>
       <p className="post-excerpt">{excerpt}</p>
-      <Link href={`/posts/${slug}`} className="read-more">
+      <Link href={`/posts/${slug}`} className="read-more" prefetch={false}>
         Read more →
       </Link>
     </article>
